@@ -1,0 +1,10 @@
+projeto_um:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: dbtproject-250621
+      dataset: "{{ env_var('DBT_DBNAME', 'dbt_dw') }}"
+      threads: 4
+      keyfile: /mnt/c/Users/calix/Downloads/dbtproject-250621-6585c0872e9d.json
